@@ -1,0 +1,24 @@
+site_name: LMHXTS
+site_description: LMHXTSlearningnotes
+
+theme:
+  name: material
+  language: zh # 设置为中文
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: deep purple
+
+nav:
+  - 首页: index.md
+  - 机器学习:
+    - 贝叶斯学习: ml/Bayes.md
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences # 支持高级代码块
+  - pymdownx.details
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js

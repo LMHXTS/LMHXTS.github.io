@@ -1,0 +1,35 @@
+name: Deploy-Blog
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+    contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # 使用最新的 Ubuntu 虚拟机作为计算节点
+    steps:
+      # Step 1: 拉取源码
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      # Step 2: 搭建 Python 环境
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      # Step 3: 安装依赖（包含我们在 mkdocs.yml 里配置的 Material 主题）
+      - name: Install Dependencies
+        run: |
+          pip install mkdocs-material
+          # 如果你以后加了其他插件，也写在这里
+
+      # Step 4: 编译并部署
+      # 该命令会自动创建 gh-pages 分支并将 site 文件夹的内容推送到那里
+      - name: Build and Deploy
+        run: |
+          mkdocs gh-deploy --force
