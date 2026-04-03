@@ -19,6 +19,8 @@ markdown_extensions:
       generic: true
   - pymdownx.superfences # 支持高级代码块
   - pymdownx.details
+  - attr_list
+  - md_in_html
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
