@@ -39,6 +39,7 @@ $$\log P(Y=c|X) \propto \log P(Y=c) + \sum_{i=1}^{n} \log P(x_i|Y=c)$$
 纯手工用 `NumPy` 搭建一个高斯朴素贝叶斯分类器。
 
 ```python
+
 import numpy as np
 
 class GaussianNaiveBayes:
@@ -90,3 +91,5 @@ class GaussianNaiveBayes:
 
         # 返回具有最大后验概率的类别
         return self._classes[np.argmax(posteriors)]
+
+```
