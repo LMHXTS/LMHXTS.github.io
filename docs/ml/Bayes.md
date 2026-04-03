@@ -1,4 +1,4 @@
-# 贝叶斯分类算法：从概率论到代码实现
+# 朴素贝叶斯分类算法
 
 ### 核心原理
 
@@ -14,7 +14,7 @@
 
 $$P(Y=c|X) = \frac{P(X|Y=c)P(Y=c)}{P(X)}$$
 
-由于对于所有的类别 $c$，分母 $P(X)$ 都是相同的，我们在比较大小时可以将其忽略，只求分子最大化：
+由于对于所有的类别 $c$，分母 $P(X)$ 都是相同的，在比较大小时可以将其忽略，只求分子最大化：
 
 $$Y_{predict} = \arg\max_{c} P(X|Y=c)P(Y=c)$$
 
@@ -22,11 +22,11 @@ $$Y_{predict} = \arg\max_{c} P(X|Y=c)P(Y=c)$$
 
 $$P(X|Y=c) = \prod_{i=1}^{n} P(x_i|Y=c)$$
 
-我们假设特征服从**高斯分布（正态分布）**。对于类别 $c$ 中的第 $i$ 个特征，其概率密度函数为：
+假设特征服从**高斯分布（正态分布）**。对于类别 $c$ 中的第 $i$ 个特征，其概率密度函数为：
 
 $$P(x_i|Y=c) = \frac{1}{\sqrt{2\pi\sigma_{c,i}^2}} \exp\left(-\frac{(x_i - \mu_{c,i})^2}{2\sigma_{c,i}^2}\right)$$
 
-为了防止多个极小的概率值连乘导致**计算机浮点数下溢（Underflow）**，我们通常对两边取自然对数，将连乘转化为连加：
+为了防止多个极小的概率值连乘导致**计算机浮点数下溢（Underflow）**，通常对两边取自然对数，将连乘转化为连加：
 
 $$\log P(Y=c|X) \propto \log P(Y=c) + \sum_{i=1}^{n} \log P(x_i|Y=c)$$
 
@@ -43,9 +43,9 @@ import numpy as np
 
 class GaussianNaiveBayes:
     def fit(self, X, y):
-        """
-        训练模型：计算每个类别的先验概率、特征均值和方差
-        """
+        
+        #训练模型：计算每个类别的先验概率、特征均值和方差
+        
         n_samples, n_features = X.shape
         self._classes = np.unique(y)
         n_classes = len(self._classes)
@@ -63,9 +63,9 @@ class GaussianNaiveBayes:
             self._priors[idx] = X_c.shape[0] / float(n_samples)
 
     def _pdf(self, class_idx, x):
-        """
-        计算高斯概率密度函数 (PDF)
-        """
+        
+        #计算高斯概率密度函数 (PDF)
+        
         mean = self._mean[class_idx]
         var = self._var[class_idx]
         numerator = np.exp(- (x - mean) ** 2 / (2 * var))
@@ -73,12 +73,12 @@ class GaussianNaiveBayes:
         return numerator / denominator
 
     def predict(self, X):
-        """预测样本类别"""
+        #预测样本类别
         y_pred = [self._predict_single(x) for x in X]
         return np.array(y_pred)
 
     def _predict_single(self, x):
-        """计算单个样本属于各类的后验概率，返回最大概率对应的类别"""
+        #计算单个样本属于各类的后验概率，返回最大概率对应的类别
         posteriors = []
 
         for idx, c in enumerate(self._classes):
