@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# Welcome to LMHXTS Blog
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 

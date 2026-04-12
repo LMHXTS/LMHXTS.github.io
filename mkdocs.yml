@@ -13,8 +13,9 @@ nav:
   - 首页: index.md
   - 机器学习:
     - 贝叶斯学习: ml/Bayes.md
-    - 决策树算法: ml/Decision_tree.md
-    - K-近邻算法: ml/K-NN.md
+    - 决策树: ml/Decision_tree.md
+    - K-近邻: ml/K-NN.md
+    - CART: ml/Cart.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
