@@ -16,6 +16,7 @@ nav:
     - 决策树: ml/Decision_tree.md
     - K-近邻: ml/K-NN.md
     - CART: ml/Cart.md
+    - XGBoost-数学推导: ml/Xgboost_math.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
