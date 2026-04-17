@@ -18,6 +18,8 @@ nav:
     - CART: ml/Cart.md
     - XGBoost-数学推导: ml/Xgboost_math.md
     - 逻辑回归: ml/Logistic_Regression.md
+  - 深度学习:
+    - BP神经网络: dl/BPNN.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
