@@ -17,6 +17,7 @@ nav:
     - K-近邻: ml/K-NN.md
     - CART: ml/Cart.md
     - XGBoost-数学推导: ml/Xgboost_math.md
+    - 逻辑回归: ml/Logistic_Regression.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
