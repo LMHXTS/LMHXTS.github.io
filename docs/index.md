@@ -9,25 +9,37 @@ hide:
     background-color: #1e1e1e;
     border-radius: 10px;
     padding: 20px;
-    font-family: 'Consolas', 'Fira Code', monospace;*/
+    font-family: 'Consolas', 'Fira Code', monospace;
     color: #e0e0e0;
     margin-top: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    /* 新增：优化长文本的自动换行，防止撑破容器 */
+    word-break: break-word;
+    white-space: normal; 
   }
   .terminal-header {
     display: flex;
     gap: 8px;
     margin-bottom: 20px;
   }
- 
   .dot { width: 12px; height: 12px; border-radius: 50%; }
   .dot-red { background: #ff5f56; }
   .dot-yellow { background: #ffbd2e; }
   .dot-green { background: #27c93f; }
   
-  .terminal-body { font-size: 1.1em; line-height: 1.8; }
-  .prompt { color: #5cc5ef; font-weight: bold; }
-  .output { color: #a6e22e; }
+  .terminal-body { font-size: 1.1em; line-height: 1.6; }
+  .prompt { color: #5cc5ef; font-weight: bold; margin-right: 8px; }
+  .command { color: #f8f8f2; }
+  
+  
+  .text-output { 
+    color: #a0a0a0; 
+    font-style: italic; 
+    margin-top: 4px;
+    margin-bottom: 16px; 
+    display: block; 
+  } 
+  .sys-output { color: #a6e22e; margin-top: 4px;}
 </style>
 
 <div class="terminal-hero">
@@ -37,12 +49,14 @@ hide:
     <div class="dot dot-green"></div>
   </div>
   <div class="terminal-body">
-    <span class="prompt">lmhxts@blog:~$</span> echo "Sich selber übervoll, sich selber bethauen, sich selber Regenguss sein einer verschmachtenden Wildniss." <br>
+    <div><span class="prompt">lmhxts@blog:~$</span><span class="command">echo "Sich selber übervoll, sich selber bethauen, sich selber Regenguss sein einer verschmachtenden Wildniss."</span></div>
     
-    <span class="prompt">lmhxts@blog:~$</span> ./start_learning.sh <br>
-    <span class="output">> Loading Machine Learning Modules... [OK]</span><br>
-    <span class="output">> Initializing Neural Networks... [OK]</span><br>
-    <span class="output">> System Ready. Enjoy reading!</span>
+    <div class="text-output">Sich selber übervoll, sich selber bethauen, sich selber Regenguss sein einer verschmachtenden Wildniss.</div>
+    
+    <div style="margin-top: 8px;"><span class="prompt">lmhxts@blog:~$</span><span class="command">./start_learning.sh</span></div>
+    <div class="sys-output">> Loading Machine Learning Modules... [OK]</div>
+    <div class="sys-output">> Initializing Neural Networks... [OK]</div>
+    <div class="sys-output">> System Ready. Enjoy reading!</div>
   </div>
 </div>
 
