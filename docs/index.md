@@ -38,7 +38,6 @@ hide:
   </div>
   <div class="terminal-body">
     <span class="prompt">lmhxts@blog:~$</span> echo "Sich selber übervoll, sich selber bethauen, sich selber Regenguss sein einer verschmachtenden Wildniss." <br>
-    Thinking will not overcome fear but action will. <br><br>
     
     <span class="prompt">lmhxts@blog:~$</span> ./start_learning.sh <br>
     <span class="output">> Loading Machine Learning Modules... [OK]</span><br>
