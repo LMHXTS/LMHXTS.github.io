@@ -1,4 +1,4 @@
-site_name: LMHXTS Blog # 参考截图修改了站点名称
+site_name: LMHXTS Blog 
 site_description: "Sich selber übervoll, sich selber bethauen, sich selber Regenguss sein einer verschmachtenden Wildniss." # 参考截图的副标题
 
 theme:
@@ -6,44 +6,42 @@ theme:
   language: zh # 设置为中文
   # 主题色彩与深浅色切换配置
   palette:
-    # 方案 1：深色模式（排在第一位，成为所有访客的默认首选）
+    # 方案 1：深色模式
     - scheme: slate
-      primary: indigo            # 靛蓝色导航栏
-      accent: deep purple        # 深紫色强调色
+      primary: indigo            
+      accent: deep purple       
       toggle:
         icon: material/weather-night
         name: 切换到浅色模式
 
-    # 方案 2：浅色模式（作为备选，点击太阳图标后切换）
+    # 方案 2：浅色模式
     - scheme: default
-      primary: white              # 这里可以保留你刚才觉得好看的浅色配置
+      primary: white              
       accent: indigo
       toggle:
         icon: material/weather-sunny
         name: 切换到深色模式
   features:
-    - navigation.tabs # 【关键】将左侧导航栏移动到顶部，实现类似截图右上角导航的效果
-    - navigation.top  # 添加“回到顶部”按钮
+    - navigation.tabs 
+    - navigation.top  
 
-# 重新组织导航，让它看起来像一个博客
+
 
 # 核心：配置顶部 Tab 和左侧导航栏
 nav:
   - HOME: index.md
-  - 机器学习:           # 这会成为顶部的一个 Tab
+  - 机器学习:           
       - 贝叶斯学习: ml/Bayes.md
       - 决策树: ml/Decision_tree.md
       - K-近邻: ml/K-NN.md
       - CART: ml/Cart.md
       - XGBoost数学推导: ml/Xgboost_math.md
       - 逻辑回归: ml/Logistic_Regression.md
-  - 深度学习:           # 这会成为顶部的一个 Tab
+  - 深度学习:           
       - BP神经网络: dl/BPNN.md
   - ABOUT: about.md
-  # - BLOG: blog/  # 如果你还想保留一个纯粹的博客板块，取消这行注释
 
 
-# 原有的 Markdown 扩展保持不变
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
@@ -55,7 +53,7 @@ markdown_extensions:
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
 
-# 【核心新增】开启插件
+
 plugins:
-  - search # 开启默认的搜索功能
-  - blog   # 开启 Material 主题自带的强大博客插件
+  - search
+  - blog   

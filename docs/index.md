@@ -6,10 +6,10 @@ hide:
 
 <style>
   .terminal-hero {
-    background-color: #1e1e1e; /* 经典的终端深灰色背景 */
+    background-color: #1e1e1e;
     border-radius: 10px;
     padding: 20px;
-    font-family: 'Consolas', 'Fira Code', monospace; /* 代码字体 */
+    font-family: 'Consolas', 'Fira Code', monospace;*/
     color: #e0e0e0;
     margin-top: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -19,7 +19,7 @@ hide:
     gap: 8px;
     margin-bottom: 20px;
   }
-  /* 模拟 Mac 窗口的红黄绿小圆点 */
+ 
   .dot { width: 12px; height: 12px; border-radius: 50%; }
   .dot-red { background: #ff5f56; }
   .dot-yellow { background: #ffbd2e; }
