@@ -6,7 +6,7 @@ tags:
   - 神经网络
 ---
 
-# BP神经网络
+# BP Neural Network
 
 ### 核心原理
 
