@@ -424,7 +424,7 @@ hide:
 
 <div class="nav-grid">
 
-  <a href="ml/Bayes.md" class="nav-card card-ml">
+  <a href="ml/Bayes/" class="nav-card card-ml">
     <span class="card-icon">🧠</span>
     <span class="card-title">机器学习</span>
     <span class="card-desc">
@@ -433,7 +433,7 @@ hide:
     <span class="card-arrow">→</span>
   </a>
 
-  <a href="dl/BPNN.md" class="nav-card card-dl">
+  <a href="dl/BPNN/" class="nav-card card-dl">
     <span class="card-icon">🔮</span>
     <span class="card-title">深度学习</span>
     <span class="card-desc">
@@ -442,7 +442,7 @@ hide:
     <span class="card-arrow">→</span>
   </a>
 
-  <a href="electrodynamics/talkemd_2.md" class="nav-card card-em">
+  <a href="electrodynamics/talkemd_2/" class="nav-card card-em">
     <span class="card-icon">⚡</span>
     <span class="card-title">电动力学</span>
     <span class="card-desc">
