@@ -4,8 +4,6 @@ site_description: "Sich selber übervoll, sich selber bethauen, sich selber Rege
 theme:
   name: material
   language: zh
-  # 自定义 CSS（用于微调样式）
-  custom_dir: docs/assets/overrides
   # 图标与字体配置
   icon:
     repo: fontawesome/brands/github
