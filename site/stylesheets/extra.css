@@ -1,0 +1,147 @@
+/* ===== 全局平滑过渡 ===== */
+:root {
+  --md-text-font: "Inter", "Noto Sans SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  --md-code-font: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== 自定义滚动条 ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--md-default-fg-color--lighter);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-accent-fg-color);
+}
+
+/* ===== 选中颜色 ===== */
+::selection {
+  background-color: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+}
+
+/* ===== 导航栏样式 ===== */
+.md-tabs {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.md-header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== 侧边栏美化 ===== */
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.md-nav__item .md-nav__link--active {
+  font-weight: 600;
+}
+
+/* ===== 正文排版优化 ===== */
+.md-content h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  border-bottom: 2px solid var(--md-accent-fg-color);
+  padding-bottom: 0.3em;
+}
+
+.md-content h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border-left: 4px solid var(--md-accent-fg-color);
+  padding-left: 0.6em;
+}
+
+.md-content h3 {
+  font-weight: 600;
+}
+
+/* ===== 代码块增强 ===== */
+.md-typeset code {
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+}
+
+.md-typeset pre > code {
+  border-radius: 8px;
+  padding: 1.2em;
+}
+
+/* ===== 表格美化 ===== */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: var(--md-code-bg-color);
+}
+
+/* ===== 引用块美化 ===== */
+.md-typeset blockquote {
+  border-left: 4px solid var(--md-accent-fg-color);
+  border-radius: 4px;
+  background: var(--md-code-bg-color);
+  padding: 0.8em 1.2em;
+}
+
+/* ===== 卡片悬停效果（用于首页快捷链接） ===== */
+.md-typeset .grid.cards > :is(ul, ol) > li,
+.md-typeset .grid > .card {
+  border-radius: 12px;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .grid.cards > :is(ul, ol) > li:hover,
+.md-typeset .grid > .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== 公告栏美化 ===== */
+.md-banner {
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+}
+
+/* ===== 数学公式微调 ===== */
+.mjx-chtml {
+  font-size: 1.05em;
+}
+
+/* ===== 页脚美化 ===== */
+.md-footer {
+  background: var(--md-primary-fg-color--dark);
+  backdrop-filter: blur(12px);
+}
+
+/* ===== 标签页增强 ===== */
+.md-typeset .tabbed-labels > label {
+  border-radius: 6px 6px 0 0;
+}
+
+/* ===== 键盘快捷键提示 ===== */
+.md-typeset kbd {
+  border-radius: 4px;
+  box-shadow: 0 2px 0 1px var(--md-default-fg-color--lighter);
+}

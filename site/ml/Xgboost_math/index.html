@@ -11,24 +11,28 @@
       
       
       
+        <link rel="prev" href="../Cart/">
+      
+      
+        <link rel="next" href="../Logistic_Regression/">
       
       
         
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>LMHXTS Blog</title>
+        <title>XGBoost数学推导 - LMHXTS Blog</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#xgboost" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/." title="LMHXTS Blog" class="md-header__button md-logo" aria-label="LMHXTS Blog" data-md-component="logo">
+    <a href="../.." title="LMHXTS Blog" class="md-header__button md-logo" aria-label="LMHXTS Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 141.3v309.3l.5-.2A449 449 0 0 1 428.8 416H448V96h-19.2c-42.2 0-84.1 8.4-123.1 24.6-16.8 7-33.4 13.9-49.7 20.7m-25.1-79.8L256 72l25.1-10.5C327.9 42 378.1 32 428.8 32H464c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48h-35.2c-50.7 0-100.9 10-147.7 29.5l-12.8 5.3c-7.9 3.3-16.7 3.3-24.6 0l-12.8-5.3C184.1 490 133.9 480 83.2 480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h35.2c50.7 0 100.9 10 147.7 29.5"/></svg>
@@ -103,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              XGBoost数学推导
             
           </span>
         </div>
@@ -209,7 +218,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -226,11 +235,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/ml/Bayes/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Bayes/" class="md-tabs__link">
           
   
   
@@ -250,7 +261,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/dl/BPNN/" class="md-tabs__link">
+        <a href="../../dl/BPNN/" class="md-tabs__link">
           
   
   
@@ -270,7 +281,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/electrodynamics/talkemd_2/" class="md-tabs__link">
+        <a href="../../electrodynamics/talkemd_2/" class="md-tabs__link">
           
   
   
@@ -288,7 +299,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
   
@@ -325,7 +336,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="LMHXTS Blog" class="md-nav__button md-logo" aria-label="LMHXTS Blog" data-md-component="logo">
+    <a href="../.." title="LMHXTS Blog" class="md-nav__button md-logo" aria-label="LMHXTS Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 141.3v309.3l.5-.2A449 449 0 0 1 428.8 416H448V96h-19.2c-42.2 0-84.1 8.4-123.1 24.6-16.8 7-33.4 13.9-49.7 20.7m-25.1-79.8L256 72l25.1-10.5C327.9 42 378.1 32 428.8 32H464c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48h-35.2c-50.7 0-100.9 10-147.7 29.5l-12.8 5.3c-7.9 3.3-16.7 3.3-24.6 0l-12.8-5.3C184.1 490 133.9 480 83.2 480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h35.2c50.7 0 100.9 10 147.7 29.5"/></svg>
@@ -343,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -367,24 +378,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -402,7 +418,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -420,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ml/Bayes/" class="md-nav__link">
+      <a href="../Bayes/" class="md-nav__link">
         
   
   
@@ -448,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ml/Decision_tree/" class="md-nav__link">
+      <a href="../Decision_tree/" class="md-nav__link">
         
   
   
@@ -476,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ml/K-NN/" class="md-nav__link">
+      <a href="../K-NN/" class="md-nav__link">
         
   
   
@@ -504,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ml/Cart/" class="md-nav__link">
+      <a href="../Cart/" class="md-nav__link">
         
   
   
@@ -529,10 +545,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/ml/Xgboost_math/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XGBoost数学推导
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -548,6 +591,159 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        简要介绍
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="简要介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        boosting集成学习
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gbdt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        梯度提升决策树（GBDT）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数学推导
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数学推导">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目标函数定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二阶泰勒展开近似
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义树的结构与正则化项
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        转换遍历方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        求解最优结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点分裂的收益
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        简要调参分析
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -560,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ml/Logistic_Regression/" class="md-nav__link">
+      <a href="../Logistic_Regression/" class="md-nav__link">
         
   
   
@@ -645,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dl/BPNN/" class="md-nav__link">
+      <a href="../../dl/BPNN/" class="md-nav__link">
         
   
   
@@ -673,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dl/Optimization/" class="md-nav__link">
+      <a href="../../dl/Optimization/" class="md-nav__link">
         
   
   
@@ -758,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/electrodynamics/talkemd_2/" class="md-nav__link">
+      <a href="../../electrodynamics/talkemd_2/" class="md-nav__link">
         
   
   
@@ -793,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -831,11 +1027,163 @@
   
 
 
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    HOME
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../Bayes/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    机器学习
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="xgboost">XGBoost算法数学推导</h1>
+<h3 id="_1">简要介绍</h3>
+<p>XGBoost全称（Extreme Gradient Boosting）极端梯度提升，他是梯度提升决策树的一种改进，通过继承多个弱学习器（通常为决策树）来构建强大的预测模型。  </p>
+<h4 id="boosting">boosting集成学习</h4>
+<p>集成学习就是将多个基学习器组合起来，以获得更好预测性能的机器学习方法。而XGBoost的集成学习发展自boosting方法，通过分步迭代的方式构建模型，即： </p>
+<ol>
+<li>每一步都训练一个新的弱学习器</li>
+<li>新学习器专注于纠正已有模型的错误</li>
+<li>最终将所有弱学习器组合形成强大的预测模型  </li>
+</ol>
+<h4 id="gbdt">梯度提升决策树（GBDT）</h4>
+<p>梯度提升决策树（GBDT）是一种特殊的提升算法，它使用决策树作为基学习器，并通过梯度下降方法优化损失函数。基本流程如下：</p>
+<ol>
+<li>初始化模型，通常是一个常数值</li>
+<li>计算当前模型的残差（实际值与预测值的差）</li>
+<li>训练一个新的决策树来拟合这些残差</li>
+<li>将新树添加到现有模型中</li>
+<li>重复步骤2-4直到满足停止条件</li>
+</ol>
+<p>XGBoost在GBDT的基础上优化了目标函数，将其分解为损失函数和正则化项（控制模型复杂度）两部分，且采用贪心算法来确定最佳的树结构。  </p>
+<p>下面进行数学推导；</p>
+<hr />
+<h3 id="_2">数学推导</h3>
+<h4 id="_3">目标函数定义</h4>
+<p>假设现在有n个样本，一共需要训练K棵树。在第t步时，我们需要训练一棵新树<span class="arithmatex">\(f_t\)</span>， 此时的目标函数可以写为：</p>
+<div class="arithmatex">\[Obj^{(t)} = \sum_{i=1}^n l(y_i, \hat{y}_i^{(t)}) + \Omega(f_t) + constant\]</div>
+<p>其中：<br />
+<span class="arithmatex">\(l\)</span> 是可导的凸损失函数（如均方误差、对数损失）。<br />
+<span class="arithmatex">\(\hat{y}_i^{(t)}\)</span> 是前 <span class="arithmatex">\(t\)</span> 棵树对样本 <span class="arithmatex">\(i\)</span> 的累积预测值。<br />
+<span class="arithmatex">\(f_t(x_i)\)</span> 是我们当前要学习的第 <span class="arithmatex">\(t\)</span> 棵树。<br />
+<span class="arithmatex">\(\Omega(f_t)\)</span> 是这棵树的正则化项（复杂度）  </p>
+<p>可以知道 <span class="arithmatex">\(\hat{y}_i^{(t)} = \sum_{j=1}^t(f_j(x_i)) = \hat{y}_i^{(t-1)} + f_t(x_i)\)</span> ，
+于是上式可进一步写为：</p>
+<div class="arithmatex">\[Obj^{(t)} = \sum_{i=1}^n l(y_i, \hat{y}_i^{(t-1)} + f_t(x_i)) + \Omega(f_t) + constant\]</div>
+<p>在第t棵树训练时，<span class="arithmatex">\(\hat{y}_i^{(t-1)}\)</span> 为已知常数。</p>
+<h4 id="_4">二阶泰勒展开近似</h4>
+<p>为寻找最优<span class="arithmatex">\(f_t\)</span>，我们将损失函数在 <span class="arithmatex">\(\hat{y}_i^{(t-1)}\)</span> 处进行二阶泰勒展开, （ 这里<span class="arithmatex">\(f_t(x_i)\)</span>相当于<span class="arithmatex">\(\delta x\)</span> ）：</p>
+<div class="arithmatex">\[Obj^{(t)} \simeq \sum_{i=1}^n  \left[ l(y_i, \hat{y}_i^{(t-1)}) +  \frac{\partial l(y_i, \hat{y}_i^{(t-1)})}{\partial \hat{y}_i^{(t-1)}}  f_t(x_i) + \frac{1}{2}  \frac{\partial^2 l(y_i, \hat{y}_i^{(t-1)})}{\partial (\hat{y}_i^{(t-1)})^2}  f_t^2(x_i) \right] + \Omega(f_t)\]</div>
+<p>将常数系数化简表示后：</p>
+<div class="arithmatex">\[Obj^{(t)} \simeq \sum_{i=1}^n \left[ g_i f_t(x_i) + \frac{1}{2} h_i f_t^2(x_i) \right] + \Omega(f_t)\]</div>
+<p>其中：<br />
+<span class="arithmatex">\(g_i = \frac{\partial l(y_i, \hat{y}_i^{(t-1)})}{\partial \hat{y}_i^{(t-1)}}\)</span> <span class="arithmatex">\(~~~~~\)</span> <span class="arithmatex">\(h_i = \frac{\partial^2 l(y_i, \hat{y}_i^{(t-1)})}{\partial (\hat{y}_i^{(t-1)})^2}\)</span> </p>
+<h4 id="_5">定义树的结构与正则化项</h4>
+<p>一棵决策树本质上是将样本映射到某个叶子节点并赋予一个权重。我们设树 <span class="arithmatex">\(f_t\)</span> 共有 <span class="arithmatex">\(T\)</span> 个叶子节点，每个叶子的权重为 <span class="arithmatex">\(w_j\)</span>。正则化项定义为：</p>
+<div class="arithmatex">\[\Omega(f_t) = \gamma T + \frac{1}{2} \lambda \sum_{j=1}^T w_j^2\]</div>
+<p>权重项系数定义为<span class="arithmatex">\(\frac{1}{2} \lambda\)</span>有利于后续化简。</p>
+<h4 id="_6">转换遍历方式</h4>
+<p>这步是本人认为最精髓的一步，它将求目标函数时的遍历方式统一为遍历叶子节点。<br />
+定义 <span class="arithmatex">\(I_j\)</span> 为被划分到第 <span class="arithmatex">\(j\)</span> 个叶子节点的样本集合,即<span class="arithmatex">\(I_j = \{ x_i | f_t(x_i) \in w_j \}\)</span> 于是目标函数可化为：</p>
+<div class="arithmatex">\[Obj^{(t)} \simeq \sum_{j=1}^T \left[ (\sum_{i \in I_j} g_i) w_j + \frac{1}{2} (\sum_{i \in I_j} h_i + \lambda) w_j^2 \right] + \gamma T\]</div>
+<p>令 <span class="arithmatex">\(G_j = \sum_{i \in I_j} g_i\)</span> ，<span class="arithmatex">\(H_j = \sum_{i \in I_j} h_i\)</span> 。目标函数变成了一个关于 <span class="arithmatex">\(w_j\)</span> 的极简一元二次函数：</p>
+<div class="arithmatex">\[Obj^{(t)} \simeq \sum_{j=1}^T \left[ G_j w_j + \frac{1}{2} (H_j + \lambda) w_j^2 \right] + \gamma T\]</div>
+<h4 id="_7">求解最优结构</h4>
+<p>对 <span class="arithmatex">\(w_j\)</span> 求导并令其为 0，可以直接得到第 <span class="arithmatex">\(j\)</span> 个叶子节点的最优权重：</p>
+<div class="arithmatex">\[w_j^* = - \frac{G_j}{H_j + \lambda}\]</div>
+<p>将最优权重代回目标函数，得到这棵树的极小值（结构分数）：</p>
+<div class="arithmatex">\[Obj^* = - \frac{1}{2} \sum_{j=1}^T \frac{G_j^2}{H_j + \lambda} + \gamma T\]</div>
+<h4 id="_8">节点分裂的收益</h4>
+<p>有了结构分数，我们在建树分裂节点时，就可以通过计算分裂前后的分数差直接判断一个特征点分割的优劣：</p>
+<div class="arithmatex">\[Gain = \frac{1}{2} \left[ \frac{G_L^2}{H_L + \lambda} + \frac{G_R^2}{H_R + \lambda} - \frac{(G_L+G_R)^2}{H_L+H_R+\lambda} \right] - \gamma\]</div>
+<hr />
+<h3 id="_9">简要调参分析</h3>
+<p>XGBoost模型中参数主要如下：<br />
+• eta（学习率）：每次迭代后对叶子节点权重的缩减系数，控制学习速度，范围[0,1]<br />
+• <span class="arithmatex">\(\gamma\)</span>（最小分裂损失）：节点分裂所需的最小损失减少量，越大越保守<br />
+• max_depth（最大树深）：单棵树的最大深度，越大模型越复杂<br />
+• min_child_weight（最小子节点权重）：子节点所需的最小样本权重和，用于控制过拟合<br />
+• subsample（样本采样比例）：构建每棵树时使用的训练样本比例，范围(0,1]<br />
+• colsample_bytree（特征采样比例）：构建每棵树时使用的特征比例，范围(0,1]<br />
+• <span class="arithmatex">\(\lambda\)</span>（正则化系数）：叶子权重的正则化项系数<br />
+• n_estimators（树的数量）：总共训练的树的数量</p>
+<p>调参策略：</p>
+<ol>
+<li>
+<p>控制过拟合的参数：
+• 降低学习率（eta）并增加树的数量（n_estimators）<br />
+• 增加min_child_weight和<span class="arithmatex">\(\gamma\)</span><br />
+• 使用subsample和colsample_bytree进行采样<br />
+• 增加正则化参数<span class="arithmatex">\(\lambda\)</span>和alpha  </p>
+</li>
+<li>
+<p>提高性能的参数：<br />
+• 增加max_depth以捕获更复杂的模式<br />
+• 减少min_child_weight以允许更细粒度的分裂<br />
+• 调整学习率和树的数量以平衡精度和训练时间  </p>
+</li>
+<li>
+<p>调参顺序： <br />
+• 首先确定学习率和树的数量<br />
+• 然后调整树的结构参数（max_depth, min_child_weight）<br />
+• 接着调整采样参数（subsample, colsample_bytree）<br />
+• 最后调整正则化参数（<span class="arithmatex">\(\lambda\)</span>, alpha）  </p>
+</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -855,6 +1203,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../Cart/" class="md-footer__link md-footer__link--prev" aria-label="上一页: CART">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                CART
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Logistic_Regression/" class="md-footer__link md-footer__link--next" aria-label="下一页: 逻辑回归">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                逻辑回归
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -882,12 +1268,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.tabs", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.path", "toc.follow", "toc.integrate", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.footer"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.path", "toc.follow", "toc.integrate", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="/javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
