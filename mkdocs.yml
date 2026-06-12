@@ -68,6 +68,7 @@ nav:
       - Optimization & Generalization: dl/Optimization.md
   - 电动力学:
       - 第一章：电磁现象的普遍规律: electrodynamics/talkemd_2.md
+      - 第二章：静电场: electrodynamics/talkemd_3.md
   - ABOUT: about.md
 
 
